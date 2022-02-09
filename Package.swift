@@ -9,9 +9,13 @@ let package = Package(
         .iOS(.v13)
     ],
     products: [
+        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "RiaStyleKit",
-            targets: ["RiaStyleKit"]),
+            name: "RiaFontKit",
+            targets: ["RiaFontKit"]),
+        .library(
+            name: "RiaColorKit",
+            targets: ["RiaColorKit"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -19,7 +23,13 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "RiaStyleKit",
+            name: "RiaFontKit",
             dependencies: []),
+        .target(
+            name: "RiaColorKit",
+            dependencies: []),
+        .testTarget(
+            name: "RiaColorKitTests",
+            dependencies: ["RiaColorKit"]),
     ]
 )

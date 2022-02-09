@@ -5,6 +5,8 @@
 //  Created by Yevhenii Tkachenko on 09.02.2022.
 //
 
+import UIKit
+
 public enum FontSize: CGFloat {
     case fontSize0 = 10
     case fontSize1 = 13
