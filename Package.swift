@@ -9,27 +9,73 @@ let package = Package(
         .iOS(.v13)
     ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
+        // MARK: - All Classic
+        .library(
+            name: "RiaStyleKit",
+            targets: [
+                "RiaFontKit",
+                "RiaColorClassicKit",
+                "RiaColorClassicKitTests",
+                "RiaUIClassicKit"
+            ]),
+        
+        // MARK: - Style
         .library(
             name: "RiaFontKit",
             targets: ["RiaFontKit"]),
         .library(
             name: "RiaColorKit",
-            targets: ["RiaColorKit"]),
+            targets: [
+                "RiaColorKit",
+                "RiaColorKitTests"
+            ]),
+        .library(
+            name: "RiaColorClassicKit",
+            targets: [
+                "RiaColorClassicKit",
+                "RiaColorClassicKitTests"
+            ]),
+        
+        // MARK: - UI
+        .library(
+            name: "RiaUIKit",
+            targets: ["RiaUIKit"]),
+        .library(
+            name: "RiaUIClassicKit",
+            targets: ["RiaUIClassicKit"]),
+        
+            .library(name: <#T##String#>, type: Product.Library.LibraryType?, targets: <#T##[String]#>)
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
+        // MARK: - Style
         .target(
             name: "RiaFontKit",
             dependencies: []),
         .target(
             name: "RiaColorKit",
             dependencies: []),
+        .target(
+            name: "RiaColorClassicKit",
+            dependencies: []),
+        
+        // MARK: - UI
+        .target(
+            name: "RiaUIKit",
+            dependencies: ["RiaFontKit", "RiaColorKit"]),
+        .target(
+            name: "RiaUIClassicKit",
+            dependencies: ["RiaFontKit", "RiaColorClassicKit"]),
+        
+        // MARK: - Tests
         .testTarget(
             name: "RiaColorKitTests",
             dependencies: ["RiaColorKit"]),
+        .testTarget(
+            name: "RiaColorClassicKitTests",
+            dependencies: ["RiaColorClassicKit"]),
     ]
 )

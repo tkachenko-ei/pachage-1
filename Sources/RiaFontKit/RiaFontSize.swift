@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum FontSize: CGFloat {
+enum RiaFontSize: CGFloat {
     case fontSize0 = 10
     case fontSize1 = 13
     case fontSize2 = 16
