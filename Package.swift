@@ -10,60 +10,42 @@ let package = Package(
     ],
     products: [
         // MARK: - Style
-        .library(
-            name: "RiaFontKit",
-            targets: ["RiaFontKit"]),
-        .library(
-            name: "RiaIconKit",
-            targets: ["RiaIconKit"]),
-        .library(
-            name: "RiaColorKit",
-            targets: ["RiaColorKit"]),
-        .library(
-            name: "RiaColorClassicKit",
-            targets: ["RiaColorClassicKit"]),
+        .library(name: "RiaFontKit",
+                 targets: ["RiaFontKit"]),
+        .library(name: "RiaIconKit",
+                 targets: ["RiaIconKit"]),
+        .library(name: "RiaColorKit",
+                 targets: ["RiaColorKit"]),
+        .library(name: "RiaColorClassicKit",
+                 targets: ["RiaColorClassicKit"]),
         
         // MARK: - UI
-        .library(
-            name: "RiaUIKit",
-            targets: ["RiaUIKit"]),
-        .library(
-            name: "RiaUIClassicKit",
-            targets: ["RiaUIClassicKit"]),
-        
-//        // MARK: - Tests
-//        .library(
-//            name: "RiaColorKitTests",
-//            targets: ["RiaColorKitTests"]),
-//        .library(
-//            name: "RiaColorClassicKitTests",
-//            targets: ["RiaColorClassicKitTests"]),
+        .library(name: "RiaUIKit",
+                 targets: ["RiaUIKit"]),
+        .library(name: "RiaUIClassicKit",
+                 targets: ["RiaUIClassicKit"]),
     ],
     targets: [
         // MARK: - Style
-        .target(
-            name: "RiaFontKit"),
-        .target(
-            name: "RiaIconKit"),
-        .target(
-            name: "RiaColorKit"),
-        .target(
-            name: "RiaColorClassicKit"),
+        .target(name: "RiaFontKit"),
+        .target(name: "RiaIconKit"),
+        .target(name: "RiaColorKit"),
+        .target(name: "RiaColorClassicKit"),
         
         // MARK: - UI
-        .target(
-            name: "RiaUIKit",
-            dependencies: ["RiaFontKit", "RiaIconKit", "RiaColorKit"]),
-        .target(
-            name: "RiaUIClassicKit",
-            dependencies: ["RiaColorClassicKit"]),
+        .target(name: "RiaUIKit",
+                dependencies: [
+                    "RiaFontKit",
+                    "RiaIconKit",
+                    "RiaColorKit"
+                ]),
+        .target(name: "RiaUIClassicKit",
+                dependencies: ["RiaColorClassicKit"]),
         
         // MARK: - Tests
-        .testTarget(
-            name: "RiaColorKitTests",
-            dependencies: ["RiaColorKit"]),
-        .testTarget(
-            name: "RiaColorClassicKitTests",
-            dependencies: ["RiaColorClassicKit"]),
+        .testTarget(name: "RiaColorKitTests",
+                    dependencies: ["RiaColorKit"]),
+        .testTarget(name: "RiaColorClassicKitTests",
+                    dependencies: ["RiaColorClassicKit"]),
     ]
 )
