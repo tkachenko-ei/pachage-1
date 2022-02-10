@@ -42,17 +42,13 @@ let package = Package(
     targets: [
         // MARK: - Style
         .target(
-            name: "RiaFontKit",
-            dependencies: []),
+            name: "RiaFontKit"),
         .target(
-            name: "RiaIconKit",
-            dependencies: []),
+            name: "RiaIconKit"),
         .target(
-            name: "RiaColorKit",
-            dependencies: []),
+            name: "RiaColorKit"),
         .target(
-            name: "RiaColorClassicKit",
-            dependencies: []),
+            name: "RiaColorClassicKit"),
         
         // MARK: - UI
         .target(
