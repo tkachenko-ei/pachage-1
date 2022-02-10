@@ -43,8 +43,6 @@ let package = Package(
         .library(
             name: "RiaUIClassicKit",
             targets: ["RiaUIClassicKit"]),
-        
-            .library(name: <#T##String#>, type: Product.Library.LibraryType?, targets: <#T##[String]#>)
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.

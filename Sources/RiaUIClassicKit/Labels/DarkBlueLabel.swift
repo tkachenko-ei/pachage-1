@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import RiaColorClassicKit
 
 open class DarkBlueLabel: BaseLabel {
-    
-    override func initLabel(staticData: StaticProtocol){
-        super.initLabel(staticData: staticData)
-        self.textColor = staticData.getDarkBlueColor()
+
+    override func initLabel() {
+        super.initLabel()
+        self.textColor = .colorContentActiveClassic
     }
 }

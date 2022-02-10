@@ -9,7 +9,7 @@ import UIKit
 
 open class BigLabel: BaseLabel {
 
-    override func initLabel(staticData: StaticProtocol) {
-         self.font = UIFont(name: staticData.getFontName(), size: staticData.getBigSize())
+    override func initLabel() {
+         self.font = UIFont(name: "ArialMT", size: 18) ?? .systemFont(ofSize: 18)
     }
 }

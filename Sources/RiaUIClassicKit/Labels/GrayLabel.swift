@@ -5,21 +5,13 @@
 //  Created by Kyrylenko George on 11/7/18.
 //
 
-import Foundation
 import UIKit
+import RiaColorClassicKit
 
 open class GrayLabel: BaseLabel {
     
-    override func initLabel(staticData: StaticProtocol){
-        super.initLabel(staticData: staticData)
-        self.textColor = staticData.getGrayColor()
-    }
-}
-
-open class BoldGrayLabel: BaseLabel {
-    
-    override func initLabel(staticData: StaticProtocol){
-        self.font = UIFont(name: staticData.getBoldFontName(), size: staticData.getNormalSize())
-        self.textColor = staticData.getGrayColor()
+    override func initLabel() {
+        super.initLabel()
+        self.textColor = .colorContentPrimaryClassic
     }
 }

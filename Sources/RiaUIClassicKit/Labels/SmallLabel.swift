@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import RiaColorClassicKit
 
 open class SmallLabel: BaseLabel {
 
-    override func initLabel(staticData: StaticProtocol){
-        super.initLabel(staticData: staticData)
-        self.font.withSize(staticData.getSmallSize())
+    override func initLabel() {
+        super.initLabel()
+        self.font.withSize(12)
     }
 }

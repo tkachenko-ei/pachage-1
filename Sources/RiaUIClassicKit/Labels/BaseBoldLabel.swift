@@ -5,10 +5,10 @@
 //  Created by Kyrylenko George on 1/4/19.
 //
 
-import Foundation
+import UIKit
 
 public class BaseBoldLabel: BaseLabel {
-    override func initLabel(staticData: StaticProtocol) {
-        self.font = UIFont(name: staticData.getBoldFontName(), size: staticData.getNormalSize())
+    override func initLabel() {
+        self.font = UIFont(name: "ArialMT-BoldMT", size: 15) ?? .systemFont(ofSize: 15)
     }
 }

@@ -13,31 +13,24 @@ open class VideoCallButton: UIButton {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        initButton(staticData: styleData)
+        initButton()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initButton(staticData: styleData)
+        initButton()
     }
     
     init() {
-        super.init(frame: CGRect())
-        initButton(staticData: styleData)
+        super.init(frame: .zero)
+        initButton()
     }
     
-    init(staticData: StaticProtocol) {
-        super.init(frame: CGRect())
-        initButton(staticData: staticData)
-    }
-    
-    func initButton(staticData: StaticProtocol) {
-        
-        self.titleLabel?.font = .fontBody
+    func initButton() {
+        self.titleLabel?.font = UIFont(name: "ArialMT", size: 15) ?? .systemFont(ofSize: 15)
         self.backgroundColor = .colorContentPriceClassic
         self.setTitleColor(.white, for: .normal)
-        if let img = UIImage(named: "i24_video_camera", in: .current, compatibleWith: nil)  {
-            
+        if let img = UIImage(named: "i24_video_camera", in: .main, compatibleWith: nil)  {
             self.setImage(img, for: .normal)
             self.imageEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 12)
         }

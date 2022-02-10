@@ -5,13 +5,14 @@
 //  Created by Kyrylenko George on 1/10/19.
 //
 
-import Foundation
+import UIKit
+import RiaColorClassicKit
 
 open class VeryBigBoldGreenLabel: BaseLabel {
     
-    override func initLabel(staticData: StaticProtocol){
-       // super.initLabel(staticData: staticData)
-        self.font = UIFont(name: staticData.getBoldFontName(), size: staticData.getVeryBigSize())
-        self.textColor = staticData.getGreenColor()
+    override func initLabel() {
+        super.initLabel()
+        self.font = UIFont(name: "ArialMT-BoldMT", size: 21) ?? .systemFont(ofSize: 21)
+        self.textColor = .colorContentSuccessClassic
     }
 }

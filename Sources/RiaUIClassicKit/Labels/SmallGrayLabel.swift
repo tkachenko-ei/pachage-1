@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import RiaColorClassicKit
 
 open class SmallGrayLabel: SmallLabel {
 
-    override func initLabel(staticData: StaticProtocol){
-        super.initLabel(staticData: staticData)
-        self.textColor = staticData.getGrayColor()
+    override func initLabel() {
+        super.initLabel()
+        self.textColor = .colorContentPrimaryClassic
     }
 }

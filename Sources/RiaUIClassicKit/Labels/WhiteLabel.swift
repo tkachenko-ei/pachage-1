@@ -9,16 +9,10 @@ import UIKit
 
 open class WhiteLabel: BaseLabel {
     
-    override func initLabel(staticData: StaticProtocol){
-        super.initLabel(staticData: staticData)
+    override func initLabel() {
+        super.initLabel()
         self.textColor = .white
     }
 }
 
-open class SmallWhiteLable: BaseLabel {
-    
-    override func initLabel(staticData: StaticProtocol){
-       self.font = UIFont(name: staticData.getFontName(), size: staticData.getSmallSize())
-        self.textColor = .white
-    }
-}
+

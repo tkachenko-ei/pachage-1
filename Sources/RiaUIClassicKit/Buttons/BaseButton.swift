@@ -6,32 +6,26 @@
 //
 
 import UIKit
-import RiaFontKit
 import RiaColorClassicKit
 
 open class BaseButton: UIButton {
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        initButton(staticData: styleData)
+        initButton()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initButton(staticData: styleData)
-    }
-    
-    init(){
-        super.init(frame: CGRect())
-        initButton(staticData: styleData)
+        initButton()
     }
     
     init() {
-        super.init(frame: CGRect())
-        initButton(staticData: staticData)
+        super.init(frame: .zero)
+        initButton()
     }
     
     func initButton() {
-        self.titleLabel?.font = .fontBody
+        self.titleLabel?.font = UIFont(name: "ArialMT", size: 15) ?? .systemFont(ofSize: 15)
         self.setTitleColor(.colorBgVerificationClassic, for: .normal)
     }
 }

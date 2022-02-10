@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import RiaColorClassicKit
 
 open class GreenLabel: BaseLabel {
     
-    override func initLabel(staticData: StaticProtocol){
-        super.initLabel(staticData: staticData)
-        self.textColor = staticData.getGreenColor()
+    override func initLabel() {
+        super.initLabel()
+        self.textColor = .colorContentSuccessClassic
     }
 }
